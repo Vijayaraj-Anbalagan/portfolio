@@ -4,7 +4,7 @@ import React from "react";
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
-import { renderAsync } from "@react-email/render";
+
 
 
 const resend = new Resend("re_QUfZ1VWD_8CMpPb8GEQXDJtGFa8GLdJQF");
@@ -27,12 +27,6 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
 
-  const html = await renderAsync(
-    QuotationFormEmail({
-      senderEmail,
-      message,
-    }) as React.ReactElement,
-  );
 
   try {
     data = await resend.emails.send({
@@ -55,7 +49,5 @@ export const sendEmail = async (formData: FormData) => {
     data,
   };
 };
-function QuotationFormEmail(arg0: { senderEmail: string; message: string; }): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
-  throw new Error("Function not implemented.");
-}
+
 
