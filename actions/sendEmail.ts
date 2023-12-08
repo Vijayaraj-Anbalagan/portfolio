@@ -4,6 +4,7 @@ import React from "react";
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
+import { renderAsync } from "@react-email/render";
 
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
@@ -25,6 +26,14 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   let data;
+
+  const html = await renderAsync(
+    QuotationFormEmail({
+      senderEmail,
+      message,
+    }) as React.ReactElement,
+  );
+  
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
@@ -46,3 +55,7 @@ export const sendEmail = async (formData: FormData) => {
     data,
   };
 };
+function QuotationFormEmail(arg0: { senderEmail: string; message: string; }): React.ReactElement<any, string | React.JSXElementConstructor<any>> {
+  throw new Error("Function not implemented.");
+}
+
