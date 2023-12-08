@@ -5,13 +5,15 @@ import { Toaster } from "react-hot-toast";
 import Footer from '@/components/footer';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
-// import ThemeContextProvider from '@/context/theme-context';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 
 export const metadata = {
   title: 'Vijayaraj Portfolio',
-  description: 'Vijayaraj Anbalagan , A Computer Science Enthusiastic and A Student',
+  description: 'Vijayaraj Anbalagan , A Computer Science Enthusiastic',
 }
 
 export default function RootLayout({
@@ -29,6 +31,8 @@ export default function RootLayout({
        <ActiveSectionContextProvider>
        <Header/>
         {children} 
+        <Analytics />
+        <SpeedInsights />
         <Footer />
         <Toaster position="top-right"/>
         <ThemeSwitch />
