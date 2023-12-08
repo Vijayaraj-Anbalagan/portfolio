@@ -7,7 +7,7 @@ import ContactFormEmail from "@/email/contact-form-email";
 import { renderAsync } from "@react-email/render";
 
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+const resend = new Resend("re_QUfZ1VWD_8CMpPb8GEQXDJtGFa8GLdJQF");
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -33,7 +33,7 @@ export const sendEmail = async (formData: FormData) => {
       message,
     }) as React.ReactElement,
   );
-  
+
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
