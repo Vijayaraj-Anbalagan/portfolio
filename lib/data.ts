@@ -61,20 +61,20 @@ export const experiencesData = [
     date: "Jan 2024 - present",
   },
   {
+    title: "Intern",
+    location: "TuTr Hyperloop, Chennai, TN, India",
+    description:
+      "At TuTr Hyperloop, an IIT incubated tech startup, I work on establishing communication between the pod and the control station. I provide a graphical user interface to control the pod and manage data transfer between the controller and the pod.",
+    icon: React.createElement(FaRocket),
+    date: "Feb 2024 - July 2024",
+  },
+  {
     title: "Web Development Intern",
     location: "Chennai, TN, India",
     description:
       "As a web development intern, I honed my skills in web development, specializing in technologies like React, Next.js, TypeScript, and Tailwind. Currently open to internship opportunities, I'm a front-end developer with a flair for design, committed to coding solutions for real-world problems.",
     icon: React.createElement(FaReact),
     date: "2022 - present",
-  },
-  {
-    title: "Intern",
-    location: "TuTr Hyperloop, Chennai, TN, India",
-    description:
-      "At TuTr Hyperloop, an IIT incubated tech startup, I work on establishing communication between the pod and the control station. I provide a graphical user interface to control the pod and manage data transfer between the controller and the pod.",
-    icon: React.createElement(FaRocket),
-    date: "Date TBD - present",
   },
 ] as const;
 
