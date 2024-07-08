@@ -122,7 +122,6 @@ export const skillsData = [
   "Bootstrap",
   "Flask",
   "TCP Protocol",
-  "Ethernet Connectivity",
-  "CAN Protocols",
-  "VCU Integeration",
+  "Ethernet",
+  "CAN",
 ] as const;
